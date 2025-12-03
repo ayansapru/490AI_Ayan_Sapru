@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Class Project | Ayan Sapru</title>
+
+  <!-- Same basic styles as index.html for a consistent look -->
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card-bg: #ffffff;
+      --primary: #133267;
+      --primary-soft: #e3ebff;
+      --text-main: #1f2933;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.08);
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    header {
+      margin-bottom: 24px;
+    }
+
+    .back-link {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+
+    .back-link span {
+      font-size: 1.1rem;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-soft);
+      padding: 24px 24px 22px;
+      border: 1px solid var(--border);
+      margin-bottom: 26px;
+    }
+
+    .card p + p {
+      margin-top: 8px;
+    }
+
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+      margin-top: 4px;
+    }
+
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .mini-card {
+      background-color: var(--card-bg);
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .mini-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--primary-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      color: var(--primary);
+    }
+
+    .mini-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .mini-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+      background-color: var(--primary);
+      color: #ffffff;
+      cursor: pointer;
+      transition: transform 0.08s ease, box-shadow 0.08s ease,
+        background-color 0.08s ease;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.2);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      background-color: #102650;
+      box-shadow: 0 12px 25px rgba(15, 23, 42, 0.25);
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: var(--primary);
+      border: 1px solid var(--primary-soft);
+      box-shadow: none;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--primary-soft);
+      box-shadow: none;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 768px) {
+      .page {
+        padding: 20px 14px 36px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .card {
+        padding: 18px 16px 16px;
+      }
+
+      .materials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <!-- >>> LINK BACK TO YOUR MAIN PAGE <<< -->
+      <a href="index.html" class="back-link"><span>←</span> Back to Portfolio</a>
+
+      <h1>AI Class Project</h1>
+      <p class="subtitle">Artificial Intelligence in Economics | Fall 2024</p>
+    </header>
+
+    <main>
+      <!-- Project Overview Card -->
+      <section class="card">
+        <h2 class="section-title">Project Overview</h2>
+
+        <!-- >>> EDIT THIS PROJECT DESCRIPTION TEXT <<< -->
+        <p>
+          This project explores how artificial intelligence tools can support
+          managerial economics, focusing on building data-driven insights for a
+          real or simulated business problem.
+        </p>
+        <p>
+          I combine theoretical concepts from the course with hands-on
+          implementation, using AI tools to organize information, analyze data,
+          and generate decision-focused recommendations.
+        </p>
+        <p>
+          The final deliverables include a presentation deck and a written
+          report that summarize the methodology, findings, limitations, and
+          potential next steps for applying AI in this context.
+        </p>
+      </section>
+
+      <!-- Project Materials -->
+      <section>
+        <h2 class="section-title">Project Materials</h2>
+
+        <div class="materials-grid">
+          <!-- Presentation Card -->
+          <article class="mini-card">
+            <div>
+              <div class="mini-icon">🖥️</div>
+              <h3 class="mini-title">Presentation Slides</h3>
+              <p class="mini-text">
+                View the slide deck summarizing the key insights from my AI
+                class project.
+              </p>
+            </div>
+
+            <!-- >>> UPDATE THIS LINK ONCE YOU HAVE SLIDES (e.g., slides.pdf or a Google Slides link) <<< -->
+            <a
+              class="btn btn-secondary"
+              href="#"
+              aria-disabled="true"
+              onclick="return false;"
+            >
+              Slides coming soon
+            </a>
+          </article>
+
+          <!-- Report Card -->
+          <article class="mini-card">
+            <div>
+              <div class="mini-icon">📘</div>
+              <h3 class="mini-title">Project Report</h3>
+              <p class="mini-text">
+                Read the full written report with detailed analysis, methods,
+                and conclusions.
+              </p>
+            </div>
+
+            <!-- >>> MAKE SURE THIS HREF MATCHS THE FILE NAME OF YOUR PROJECT PDF <<< -->
+            <a class="btn" href="project.pdf" target="_blank" rel="noopener">
+              View Report
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
