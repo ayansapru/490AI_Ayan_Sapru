@@ -1,14 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My AI 490 Site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayan Sapru | Portfolio</title>
+  <style>
+    :root {
+      --bg: #f4f5fb;
+      --card-bg: #ffffff;
+      --accent: #3b82f6;
+      --accent-soft: #dbeafe;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border-radius-lg: 18px;
+      --shadow-soft: 0 14px 35px rgba(15, 23, 42, 0.12);
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: radial-gradient(circle at top, #e0f2fe 0, #f4f5fb 45%, #e5e7eb 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin: auto;
+      padding: 24px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 24px;
+      box-shadow: var(--shadow-soft);
+      padding: 32px 28px;
+    }
+
+    /* Profile */
+    .profile-header {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .profile-pic {
+      width: 96px;
+      height: 96px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent-soft), #fee2e2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .title-block h1 {
+      font-size: 2.4rem;
+      margin: 0 0 6px;
+    }
+
+    .title-block p {
+      margin: 0;
+      color: var(--text-muted);
+      max-width: 600px;
+    }
+
+    /* Sections / Buttons */
+    .sections {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .section-card {
+      border-radius: var(--border-radius-lg);
+      padding: 20px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      display: block;
+      text-decoration: none;
+      transition: 0.15s;
+      color: inherit;
+    }
+
+    .section-card:hover {
+      transform: translateY(-2px);
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      margin: 6px 0 16px;
+    }
+
+    .section-cta {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: right;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* PROJECT PAGE SECTION */
+    #project-page {
+      display: none;
+    }
+
+    .back-btn {
+      color: var(--accent);
+      display: inline-block;
+      margin-bottom: 16px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .material-card {
+      border-radius: var(--border-radius-lg);
+      padding: 20px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      transition: 0.15s;
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }
+
+    .material-card:hover {
+      transform: translateY(-2px);
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
+    }
+
+    @media (max-width: 720px) {
+      .sections,
+      .materials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script>
+    function showProjectPage() {
+      document.getElementById('main-page').style.display = 'none';
+      document.getElementById('project-page').style.display = 'block';
+      window.scrollTo(0, 0);
+    }
+
+    function showMainPage() {
+      document.getElementById('project-page').style.display = 'none';
+      document.getElementById('main-page').style.display = 'block';
+      window.scrollTo(0, 0);
+    }
+  </script>
+
 </head>
 <body>
-    <h1>Hello from my first webpage!</h1>
-    <p>This page will later host my coursework</p>
-    <p><strong>Ayan Sapru</strong></p>
+
+<div class="container">
+
+  <!-- MAIN PAGE -->
+  <div id="main-page" class="card">
+
+    <div class="profile-header">
+      <div class="profile-pic">AS</div>
+
+      <div class="title-block">
+        <h1>Ayan Sapru</h1>
+        <p>Undergraduate Managerial Economics student at UMass Amherst interested in AI, economics, and data-driven decision-making.</p>
+      </div>
+    </div>
+
+    <div class="sections">
+      <!-- Resume -->
+      <a href="resume.pdf" class="section-card" target="_blank">
+        <div class="section-title">Resume</div>
+        <div class="section-desc">View my professional resume (PDF).</div>
+        <div class="section-cta">Open resume →</div>
+      </a>
+
+      <!-- Projects -->
+      <div onclick="showProjectPage()" class="section-card" style="cursor: pointer;">
+        <div class="section-title">AI Class Project</div>
+        <div class="section-desc">See my project description, slides, and report.</div>
+        <div class="section-cta">View project →</div>
+      </div>
+    </div>
+
+    <footer>Last updated for RESECON 490AI</footer>
+  </div>
+
+  <!-- PROJECT PAGE -->
+  <div id="project-page" class="card">
+
+    <a class="back-btn" onclick="showMainPage()">← Back to Home</a>
+
+    <h1>AI Class Project</h1>
+    <p style="color: var(--text-muted); margin-top:-8px;">RESECON 490AI · Artificial Intelligence in Economics</p>
+
+    <p style="margin-top:16px;">
+      This project explores how AI tools can support economic analysis, data summarization,
+      and communication. I used AI to assist with structuring research, analyzing sources,
+      and creating professional-quality outputs. The project evaluates both the capabilities
+      and limitations of AI in applied economics work.
+    </p>
+
+    <h2 style="margin-top:25px;">Project Materials</h2>
+
+    <div class="materials-grid">
+
+      <!-- Slides -->
+      <a href="#" class="material-card">
+        <div class="section-title">Presentation Slides</div>
+        <div class="section-desc">Slides coming soon.</div>
+        <div class="section-cta">View placeholder →</div>
+      </a>
+
+      <!-- Report -->
+      <a href="project.pdf" class="material-card" target="_blank">
+        <div class="section-title">Project Report</div>
+        <div class="section-desc">Download the project report (PDF).</div>
+        <div class="section-cta">Open report →</div>
+      </a>
+
+    </div>
+
+    <footer style="margin-top:20px;">AI in Economics · Final Project</footer>
+
+  </div>
+
+</div>
+
 </body>
 </html>
 
