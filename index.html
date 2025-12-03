@@ -4,255 +4,282 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ayan Sapru | Portfolio</title>
+
   <style>
     :root {
-      --bg: #f4f5fb;
+      --bg: #f5f7fb;
       --card-bg: #ffffff;
-      --accent: #3b82f6;
-      --accent-soft: #dbeafe;
-      --text-main: #111827;
+      --primary: #133267;
+      --primary-soft: #e3ebff;
+      --text-main: #1f2933;
       --text-muted: #6b7280;
-      --border-radius-lg: 18px;
-      --shadow-soft: 0 14px 35px rgba(15, 23, 42, 0.12);
+      --border: #e5e7eb;
+      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.08);
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      background: radial-gradient(circle at top, #e0f2fe 0, #f4f5fb 45%, #e5e7eb 100%);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background-color: var(--bg);
       color: var(--text-main);
-      min-height: 100vh;
+      line-height: 1.6;
     }
 
-    .container {
-      width: 100%;
-      max-width: 960px;
-      margin: auto;
-      padding: 24px;
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
     }
+
+    header {
+      margin-bottom: 24px;
+    }
+
+    .back-link {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+
+    .back-link span {
+      font-size: 1.1rem;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+    }
+
+    /* Cards / layout */
 
     .card {
-      background: var(--card-bg);
-      border-radius: 24px;
+      background-color: var(--card-bg);
+      border-radius: var(--radius-xl);
       box-shadow: var(--shadow-soft);
-      padding: 32px 28px;
+      padding: 24px 24px 22px;
+      border: 1px solid var(--border);
     }
 
-    /* Profile */
-    .profile-header {
-      display: flex;
+    .about-wrapper {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
       gap: 24px;
       align-items: center;
-      flex-wrap: wrap;
+      margin-top: 20px;
+      margin-bottom: 28px;
     }
 
-    .profile-pic {
-      width: 96px;
-      height: 96px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent-soft), #fee2e2);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--accent);
+    .profile-photo {
+      width: 100%;
+      border-radius: 18px;
+      background-color: var(--primary-soft);
+      object-fit: cover;
+      aspect-ratio: 4 / 5;
     }
 
-    .title-block h1 {
-      font-size: 2.4rem;
-      margin: 0 0 6px;
+    .about-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
     }
 
-    .title-block p {
-      margin: 0;
-      color: var(--text-muted);
-      max-width: 600px;
-    }
-
-    /* Sections / Buttons */
-    .sections {
-      margin-top: 30px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .section-card {
-      border-radius: var(--border-radius-lg);
-      padding: 20px;
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-      display: block;
-      text-decoration: none;
-      transition: 0.15s;
-      color: inherit;
-    }
-
-    .section-card:hover {
-      transform: translateY(-2px);
-      background: #fff;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
+    .about-text p + p {
+      margin-top: 8px;
     }
 
     .section-title {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 600;
+      margin-bottom: 14px;
+      margin-top: 8px;
     }
 
-    .section-desc {
-      color: var(--text-muted);
-      margin: 6px 0 16px;
-    }
-
-    .section-cta {
-      color: var(--accent);
-      font-weight: 500;
-    }
-
-    footer {
-      margin-top: 20px;
-      text-align: right;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    /* PROJECT PAGE SECTION */
-    #project-page {
-      display: none;
-    }
-
-    .back-btn {
-      color: var(--accent);
-      display: inline-block;
-      margin-bottom: 16px;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    .materials-grid {
+    .card-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-top: 20px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
     }
 
-    .material-card {
-      border-radius: var(--border-radius-lg);
-      padding: 20px;
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-      transition: 0.15s;
-      color: inherit;
+    .mini-card {
+      background-color: var(--card-bg);
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .mini-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--primary-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      color: var(--primary);
+    }
+
+    .mini-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .mini-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
       text-decoration: none;
-      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+      background-color: var(--primary);
+      color: #ffffff;
+      cursor: pointer;
+      transition: transform 0.08s ease, box-shadow 0.08s ease,
+        background-color 0.08s ease;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.2);
     }
 
-    .material-card:hover {
-      transform: translateY(-2px);
-      background: #fff;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
+    .btn:hover {
+      transform: translateY(-1px);
+      background-color: #102650;
+      box-shadow: 0 12px 25px rgba(15, 23, 42, 0.25);
     }
 
-    @media (max-width: 720px) {
-      .sections,
-      .materials-grid {
+    .btn-secondary {
+      background-color: #ffffff;
+      color: var(--primary);
+      border: 1px solid var(--primary-soft);
+      box-shadow: none;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--primary-soft);
+      box-shadow: none;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 768px) {
+      .page {
+        padding: 20px 14px 36px;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      .about-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 18px 16px 16px;
+      }
+
+      .card-grid {
         grid-template-columns: 1fr;
       }
     }
   </style>
-
-  <script>
-    function showProjectPage() {
-      document.getElementById('main-page').style.display = 'none';
-      document.getElementById('project-page').style.display = 'block';
-      window.scrollTo(0, 0);
-    }
-
-    function showMainPage() {
-      document.getElementById('project-page').style.display = 'none';
-      document.getElementById('main-page').style.display = 'block';
-      window.scrollTo(0, 0);
-    }
-  </script>
-
 </head>
 <body>
+  <div class="page">
+    <header>
+      <!-- You can remove this "Back to Home" link if you only have one page -->
+      <!-- <a href="#" class="back-link"><span>←</span> Back to Home</a> -->
 
-<div class="container">
+      <!-- >>> EDIT YOUR NAME + TAGLINE HERE <<< -->
+      <h1>Ayan Sapru</h1>
+      <p class="subtitle">
+        Undergraduate Student, Managerial Economics &amp; Sport Management |
+        University of Massachusetts Amherst
+      </p>
+    </header>
 
-  <!-- MAIN PAGE -->
-  <div id="main-page" class="card">
+    <main>
+      <section class="card about-card">
+        <div class="about-wrapper">
+          <!-- >>> REPLACE THE IMAGE SRC WITH YOUR OWN PHOTO IF YOU HAVE ONE <<< -->
+          <img
+            src="https://via.placeholder.com/300x380.png?text=Profile+Photo"
+            alt="Profile photo of Ayan Sapru"
+            class="profile-photo"
+          />
 
-    <div class="profile-header">
-      <div class="profile-pic">AS</div>
+          <div class="about-text">
+            <h2 class="about-title">About Me</h2>
 
-      <div class="title-block">
-        <h1>Ayan Sapru</h1>
-        <p>Undergraduate Managerial Economics student at UMass Amherst interested in AI, economics, and data-driven decision-making.</p>
-      </div>
-    </div>
+            <!-- >>> EDIT THIS ABOUT-ME TEXT <<< -->
+            <p>
+              I’m a Managerial Economics and Sport Management student at UMass
+              Amherst with a strong interest in artificial intelligence, sports
+              business, and data-driven decision making.
+            </p>
+            <p>
+              I enjoy using analytics and emerging technologies to solve real
+              business problems, especially in sports, marketing, and
+              sponsorship strategy. This site highlights my academic work and
+              projects from my AI in Economics course.
+            </p>
+            <p>
+              Explore my resume and projects below to learn more about my
+              background, skills, and experience.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <div class="sections">
-      <!-- Resume -->
-      <a href="resume.pdf" class="section-card" target="_blank">
-        <div class="section-title">Resume</div>
-        <div class="section-desc">View my professional resume (PDF).</div>
-        <div class="section-cta">Open resume →</div>
-      </a>
+      <section>
+        <h2 class="section-title">Explore</h2>
 
-      <!-- Projects -->
-      <div onclick="showProjectPage()" class="section-card" style="cursor: pointer;">
-        <div class="section-title">AI Class Project</div>
-        <div class="section-desc">See my project description, slides, and report.</div>
-        <div class="section-cta">View project →</div>
-      </div>
-    </div>
+        <div class="card-grid">
+          <!-- Resume Card -->
+          <article class="mini-card">
+            <div>
+              <div class="mini-icon">📄</div>
+              <h3 class="mini-title">Resume</h3>
+              <p class="mini-text">
+                View my professional background, education, and experiences.
+              </p>
+            </div>
 
-    <footer>Last updated for RESECON 490AI</footer>
-  </div>
+            <!-- >>> MAKE SURE THIS HREF MATCHS THE FILE NAME OF YOUR RESUME PDF <<< -->
+            <a class="btn" href="resume.pdf" target="_blank" rel="noopener">
+              View Resume
+            </a>
+          </article>
 
-  <!-- PROJECT PAGE -->
-  <div id="project-page" class="card">
+          <!-- Projects Card -->
+          <article class="mini
 
-    <a class="back-btn" onclick="showMainPage()">← Back to Home</a>
-
-    <h1>AI Class Project</h1>
-    <p style="color: var(--text-muted); margin-top:-8px;">RESECON 490AI · Artificial Intelligence in Economics</p>
-
-    <p style="margin-top:16px;">
-      This project explores how AI tools can support economic analysis, data summarization,
-      and communication. I used AI to assist with structuring research, analyzing sources,
-      and creating professional-quality outputs. The project evaluates both the capabilities
-      and limitations of AI in applied economics work.
-    </p>
-
-    <h2 style="margin-top:25px;">Project Materials</h2>
-
-    <div class="materials-grid">
-
-      <!-- Slides -->
-      <a href="#" class="material-card">
-        <div class="section-title">Presentation Slides</div>
-        <div class="section-desc">Slides coming soon.</div>
-        <div class="section-cta">View placeholder →</div>
-      </a>
-
-      <!-- Report -->
-      <a href="project.pdf" class="material-card" target="_blank">
-        <div class="section-title">Project Report</div>
-        <div class="section-desc">Download the project report (PDF).</div>
-        <div class="section-cta">Open report →</div>
-      </a>
-
-    </div>
-
-    <footer style="margin-top:20px;">AI in Economics · Final Project</footer>
-
-  </div>
-
-</div>
-
-</body>
-</html>
-
+            
