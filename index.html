@@ -50,7 +50,7 @@
     .subtitle-detail {
       font-size: 0.95rem;
       color: var(--text-muted);
-      max-width: 640px;
+      max-width: 680px;
     }
 
     .card-row {
@@ -68,4 +68,104 @@
       padding: 22px 20px 20px;
       display: flex;
       flex-direction: column;
-      justify-content:
+      justify-content: space-between;
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .card-footer { margin-top: auto; }
+
+    .link-button {
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #2563eb;
+    }
+
+    .link-button:hover { text-decoration: underline; }
+
+    footer {
+      margin-top: 32px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    @media (max-width: 720px) {
+      .page { padding: 24px 14px 32px; }
+      h1 { font-size: 2.1rem; }
+      .card-row { grid-template-columns: 1fr; }
+      footer { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <!-- YOUR NAME -->
+      <h1>Ayan Sapru</h1>
+
+      <!-- main line under your name -->
+      <p class="subtitle-main">
+        Sport Management &amp; Managerial Economics student at UMass Amherst focused on sport sponsorship, AI, and data-driven decision-making.
+      </p>
+
+      <!-- more detail that actually sounds like you -->
+      <p class="subtitle-detail">
+        I’m passionate about how brands, athletes, and teams work together through sponsorships and media. 
+        My experience spans agency work in the U.S. and India, sport marketing, and AI in Economics coursework. 
+        This site hosts my resume and an AI-supported research project on the U.S. sports sponsorship industry.
+      </p>
+    </header>
+
+    <main>
+      <section class="card-row">
+        <!-- RESUME CARD -->
+        <article class="card">
+          <div>
+            <h2 class="card-title">Resume</h2>
+            <p class="card-text">
+              View my professional resume (PDF), including internships with PTSE, JSW Sports, Sony Sports Network,
+              and other sport business roles.
+            </p>
+          </div>
+          <div class="card-footer">
+            <!-- IMPORTANT: this uses your real file name with spaces -->
+            <a class="link-button" href="Ayan Sapru Resume OCT 2025 FINAL VERSION pdf.pdf" target="_blank" rel="noopener">
+              Open resume →
+            </a>
+          </div>
+        </article>
+
+        <!-- PROJECT CARD -->
+        <article class="card">
+          <div>
+            <h2 class="card-title">AI Class Project</h2>
+            <p class="card-text">
+              Explore my AI in Economics project on the U.S. sports sponsorship industry, including overview and report.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a class="link-button" href="project.html">
+              View project →
+            </a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      Last updated for RESECON 490AI
+    </footer>
+  </div>
+</body>
+</html>
