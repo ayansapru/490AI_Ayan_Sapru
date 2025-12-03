@@ -10,7 +10,6 @@
       --bg: #f5f7fb;
       --card-bg: #ffffff;
       --primary: #133267;
-      --primary-soft: #e3ebff;
       --text-main: #1f2933;
       --text-muted: #6b7280;
       --border: #e5e7eb;
@@ -18,15 +17,10 @@
       --radius-lg: 18px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background-color: var(--bg);
       color: var(--text-main);
       line-height: 1.6;
@@ -38,15 +32,12 @@
       padding: 32px 16px 48px;
     }
 
-    header {
-      margin-bottom: 28px;
-      text-align: left;
-    }
+    header { margin-bottom: 28px; }
 
     h1 {
       font-size: 2.6rem;
       font-weight: 700;
-      color: var(--primary);
+      color: #0f172a;
       margin-bottom: 4px;
     }
 
@@ -77,120 +68,4 @@
       padding: 22px 20px 20px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .card-title {
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .card-text {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
-
-    .card-footer {
-      margin-top: auto;
-    }
-
-    .link-button {
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #2563eb;
-    }
-
-    .link-button:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      margin-top: 32px;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      text-align: right;
-    }
-
-    @media (max-width: 720px) {
-      .page {
-        padding: 24px 14px 32px;
-      }
-      h1 {
-        font-size: 2.1rem;
-      }
-      .card-row {
-        grid-template-columns: 1fr;
-      }
-      footer {
-        text-align: left;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="page">
-    <header>
-      <!-- >>> EDIT NAME HERE IF NEEDED <<< -->
-      <h1>Ayan Sapru</h1>
-
-      <!-- line directly under your name -->
-      <p class="subtitle-main">
-        Undergraduate Managerial Economics student at UMass Amherst interested in AI,
-        economics, and data-driven decision-making.
-      </p>
-
-      <!-- extra detail below (you asked for “a bit more detail”) -->
-      <p class="subtitle-detail">
-        I’m especially interested in how artificial intelligence and analytics can
-        support business strategy in sports, media, and sponsorship. This site
-        hosts my resume and the AI in Economics course project I completed for
-        RESECON 490AI.
-      </p>
-    </header>
-
-    <main>
-      <section class="card-row">
-        <!-- Resume card -->
-        <article class="card">
-          <div>
-            <h2 class="card-title">Resume</h2>
-            <p class="card-text">
-              View my professional resume (PDF) including education, coursework,
-              and internship experience.
-            </p>
-          </div>
-          <div class="card-footer">
-            <!-- IMPORTANT: this assumes resume.pdf sits next to index.html -->
-            <a class="link-button" href="resume.pdf" target="_blank" rel="noopener">
-              Open resume →
-            </a>
-          </div>
-        </article>
-
-        <!-- AI Class Project card -->
-        <article class="card">
-          <div>
-            <h2 class="card-title">AI Class Project</h2>
-            <p class="card-text">
-              See my project overview, presentation, and written report for
-              RESECON 490AI.
-            </p>
-          </div>
-          <div class="card-footer">
-            <!-- this goes to project.html (see file below) -->
-            <a class="link-button" href="project.html">
-              View project →
-            </a>
-          </div>
-        </article>
-      </section>
-    </main>
-
-    <footer>
-      Last updated for RESECON 490AI
-    </footer>
-  </div>
-</body>
-</html>
+      justify-content:
