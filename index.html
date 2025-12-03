@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ayan Sapru | Portfolio</title>
+  <title>Ayan Sapru | RESECON 490AI Portfolio</title>
 
   <style>
     :root {
@@ -15,8 +15,7 @@
       --text-muted: #6b7280;
       --border: #e5e7eb;
       --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.08);
-      --radius-lg: 16px;
-      --radius-xl: 20px;
+      --radius-lg: 18px;
     }
 
     * {
@@ -34,180 +33,98 @@
     }
 
     .page {
-      max-width: 1040px;
+      max-width: 920px;
       margin: 0 auto;
-      padding: 24px 16px 48px;
+      padding: 32px 16px 48px;
     }
 
     header {
-      margin-bottom: 24px;
-    }
-
-    .back-link {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      margin-bottom: 12px;
-    }
-
-    .back-link span {
-      font-size: 1.1rem;
+      margin-bottom: 28px;
+      text-align: left;
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       font-weight: 700;
       color: var(--primary);
       margin-bottom: 4px;
     }
 
-    .subtitle {
-      font-size: 0.98rem;
+    .subtitle-main {
+      font-size: 1rem;
       color: var(--text-muted);
-    }
-
-    /* Cards / layout */
-
-    .card {
-      background-color: var(--card-bg);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow-soft);
-      padding: 24px 24px 22px;
-      border: 1px solid var(--border);
-    }
-
-    .about-wrapper {
-      display: grid;
-      grid-template-columns: 190px minmax(0, 1fr);
-      gap: 24px;
-      align-items: center;
-      margin-top: 20px;
-      margin-bottom: 28px;
-    }
-
-    .profile-photo {
-      width: 100%;
-      border-radius: 18px;
-      background-color: var(--primary-soft);
-      object-fit: cover;
-      aspect-ratio: 4 / 5;
-    }
-
-    .about-title {
-      font-size: 1.2rem;
-      font-weight: 600;
       margin-bottom: 8px;
     }
 
-    .about-text p + p {
-      margin-top: 8px;
+    .subtitle-detail {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 640px;
     }
 
-    .section-title {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 14px;
-      margin-top: 8px;
-    }
-
-    .card-grid {
+    .card-row {
+      margin-top: 26px;
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
+      gap: 20px;
     }
 
-    .mini-card {
+    .card {
       background-color: var(--card-bg);
       border-radius: var(--radius-lg);
-      padding: 18px 18px 16px;
       border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+      padding: 22px 20px 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .mini-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background-color: var(--primary-soft);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-      color: var(--primary);
-    }
-
-    .mini-title {
+    .card-title {
       font-weight: 600;
       margin-bottom: 4px;
     }
 
-    .mini-text {
+    .card-text {
       font-size: 0.95rem;
       color: var(--text-muted);
       margin-bottom: 12px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
+    .card-footer {
+      margin-top: auto;
+    }
+
+    .link-button {
       text-decoration: none;
       font-size: 0.95rem;
       font-weight: 600;
-      text-align: center;
-      background-color: var(--primary);
-      color: #ffffff;
-      cursor: pointer;
-      transition: transform 0.08s ease, box-shadow 0.08s ease,
-        background-color 0.08s ease;
-      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.2);
+      color: #2563eb;
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-      background-color: #102650;
-      box-shadow: 0 12px 25px rgba(15, 23, 42, 0.25);
+    .link-button:hover {
+      text-decoration: underline;
     }
 
-    .btn-secondary {
-      background-color: #ffffff;
-      color: var(--primary);
-      border: 1px solid var(--primary-soft);
-      box-shadow: none;
+    footer {
+      margin-top: 32px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: right;
     }
 
-    .btn-secondary:hover {
-      background-color: var(--primary-soft);
-      box-shadow: none;
-      transform: translateY(-1px);
-    }
-
-    @media (max-width: 768px) {
+    @media (max-width: 720px) {
       .page {
-        padding: 20px 14px 36px;
+        padding: 24px 14px 32px;
       }
-
       h1 {
-        font-size: 1.9rem;
+        font-size: 2.1rem;
       }
-
-      .about-wrapper {
+      .card-row {
         grid-template-columns: 1fr;
       }
-
-      .card {
-        padding: 18px 16px 16px;
-      }
-
-      .card-grid {
-        grid-template-columns: 1fr;
+      footer {
+        text-align: left;
       }
     }
   </style>
@@ -215,71 +132,65 @@
 <body>
   <div class="page">
     <header>
-      <!-- You can remove this "Back to Home" link if you only have one page -->
-      <!-- <a href="#" class="back-link"><span>←</span> Back to Home</a> -->
-
-      <!-- >>> EDIT YOUR NAME + TAGLINE HERE <<< -->
+      <!-- >>> EDIT NAME HERE IF NEEDED <<< -->
       <h1>Ayan Sapru</h1>
-      <p class="subtitle">
-        Undergraduate Student, Managerial Economics &amp; Sport Management |
-        University of Massachusetts Amherst
+
+      <!-- line directly under your name -->
+      <p class="subtitle-main">
+        Undergraduate Managerial Economics student at UMass Amherst interested in AI,
+        economics, and data-driven decision-making.
+      </p>
+
+      <!-- extra detail below (you asked for “a bit more detail”) -->
+      <p class="subtitle-detail">
+        I’m especially interested in how artificial intelligence and analytics can
+        support business strategy in sports, media, and sponsorship. This site
+        hosts my resume and the AI in Economics course project I completed for
+        RESECON 490AI.
       </p>
     </header>
 
     <main>
-      <section class="card about-card">
-        <div class="about-wrapper">
-          <!-- >>> REPLACE THE IMAGE SRC WITH YOUR OWN PHOTO IF YOU HAVE ONE <<< -->
-          <img
-            src="https://via.placeholder.com/300x380.png?text=Profile+Photo"
-            alt="Profile photo of Ayan Sapru"
-            class="profile-photo"
-          />
-
-          <div class="about-text">
-            <h2 class="about-title">About Me</h2>
-
-            <!-- >>> EDIT THIS ABOUT-ME TEXT <<< -->
-            <p>
-              I’m a Managerial Economics and Sport Management student at UMass
-              Amherst with a strong interest in artificial intelligence, sports
-              business, and data-driven decision making.
-            </p>
-            <p>
-              I enjoy using analytics and emerging technologies to solve real
-              business problems, especially in sports, marketing, and
-              sponsorship strategy. This site highlights my academic work and
-              projects from my AI in Economics course.
-            </p>
-            <p>
-              Explore my resume and projects below to learn more about my
-              background, skills, and experience.
+      <section class="card-row">
+        <!-- Resume card -->
+        <article class="card">
+          <div>
+            <h2 class="card-title">Resume</h2>
+            <p class="card-text">
+              View my professional resume (PDF) including education, coursework,
+              and internship experience.
             </p>
           </div>
-        </div>
-      </section>
-
-      <section>
-        <h2 class="section-title">Explore</h2>
-
-        <div class="card-grid">
-          <!-- Resume Card -->
-          <article class="mini-card">
-            <div>
-              <div class="mini-icon">📄</div>
-              <h3 class="mini-title">Resume</h3>
-              <p class="mini-text">
-                View my professional background, education, and experiences.
-              </p>
-            </div>
-
-            <!-- >>> MAKE SURE THIS HREF MATCHS THE FILE NAME OF YOUR RESUME PDF <<< -->
-            <a class="btn" href="resume.pdf" target="_blank" rel="noopener">
-              View Resume
+          <div class="card-footer">
+            <!-- IMPORTANT: this assumes resume.pdf sits next to index.html -->
+            <a class="link-button" href="resume.pdf" target="_blank" rel="noopener">
+              Open resume →
             </a>
-          </article>
+          </div>
+        </article>
 
-          <!-- Projects Card -->
-          <article class="mini
+        <!-- AI Class Project card -->
+        <article class="card">
+          <div>
+            <h2 class="card-title">AI Class Project</h2>
+            <p class="card-text">
+              See my project overview, presentation, and written report for
+              RESECON 490AI.
+            </p>
+          </div>
+          <div class="card-footer">
+            <!-- this goes to project.html (see file below) -->
+            <a class="link-button" href="project.html">
+              View project →
+            </a>
+          </div>
+        </article>
+      </section>
+    </main>
 
-            
+    <footer>
+      Last updated for RESECON 490AI
+    </footer>
+  </div>
+</body>
+</html>
