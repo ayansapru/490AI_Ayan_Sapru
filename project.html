@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Class Project | Ayan Sapru</title>
+  <title>Ayan Sapru | RESECON 490AI Portfolio</title>
 
   <style>
     :root {
       --bg: #f5f7fb;
       --card-bg: #ffffff;
       --primary: #133267;
-      --primary-soft: #e3ebff;
       --text-main: #1f2933;
       --text-muted: #6b7280;
       --border: #e5e7eb;
@@ -18,15 +17,10 @@
       --radius-lg: 18px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background-color: var(--bg);
       color: var(--text-main);
       line-height: 1.6;
@@ -38,58 +32,43 @@
       padding: 32px 16px 48px;
     }
 
-    header {
-      margin-bottom: 24px;
-    }
-
-    .back-link {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      margin-bottom: 8px;
-    }
-
-    .back-link span {
-      font-size: 1.1rem;
-    }
+    header { margin-bottom: 28px; }
 
     h1 {
-      font-size: 2.3rem;
+      font-size: 2.6rem;
       font-weight: 700;
-      color: var(--primary);
+      color: #0f172a;
       margin-bottom: 4px;
     }
 
-    .subtitle {
-      font-size: 0.95rem;
+    .subtitle-main {
+      font-size: 1rem;
       color: var(--text-muted);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
-    .overview-card,
-    .materials-row > .card {
+    .subtitle-detail {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 640px;
+    }
+
+    .card-row {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
       background-color: var(--card-bg);
       border-radius: var(--radius-lg);
       border: 1px solid var(--border);
       box-shadow: var(--shadow-soft);
       padding: 22px 20px 20px;
-      margin-bottom: 20px;
-    }
-
-    .section-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .materials-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-      margin-top: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .card-title {
@@ -103,6 +82,8 @@
       margin-bottom: 12px;
     }
 
+    .card-footer { margin-top: auto; }
+
     .link-button {
       text-decoration: none;
       font-size: 0.95rem;
@@ -110,86 +91,83 @@
       color: #2563eb;
     }
 
-    .link-button:hover {
-      text-decoration: underline;
+    .link-button:hover { text-decoration: underline; }
+
+    footer {
+      margin-top: 32px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: right;
     }
 
     @media (max-width: 720px) {
-      .page {
-        padding: 24px 14px 32px;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      .materials-row {
-        grid-template-columns: 1fr;
-      }
+      .page { padding: 24px 14px 32px; }
+      h1 { font-size: 2.1rem; }
+      .card-row { grid-template-columns: 1fr; }
+      footer { text-align: left; }
     }
   </style>
 </head>
 <body>
   <div class="page">
     <header>
-      <a href="index.html" class="back-link"><span>←</span> Back to portfolio</a>
-      <h1>AI Class Project</h1>
-      <p class="subtitle">RESECON 490AI – Artificial Intelligence in Economics</p>
+      <!-- YOUR NAME -->
+      <h1>Ayan Sapru</h1>
+
+      <!-- 1st line under your name -->
+      <p class="subtitle-main">
+        Undergraduate Managerial Economics &amp; Sport Management student at UMass Amherst
+        interested in AI, economics, and data-driven decision-making.
+      </p>
+
+      <!-- Extra detail -->
+      <p class="subtitle-detail">
+        I focus on how artificial intelligence and analytics can support business strategy in
+        sports, media, and sponsorship. This site hosts my resume and the AI in Economics
+        project I completed for RESECON 490AI.
+      </p>
     </header>
 
     <main>
-      <!-- Overview -->
-      <section class="overview-card">
-        <h2 class="section-title">Project Overview</h2>
-        <p>
-          This project applies artificial intelligence tools in a managerial
-          economics context. I use AI to help structure information, explore
-          data, and generate insights for a business-style research question.
-        </p>
-        <p>
-          The work combines course concepts with practical experimentation:
-          prompting large language models, evaluating their output, and
-          integrating human judgment to improve the final deliverables.
-        </p>
-        <p>
-          The materials below include a short slide deck and a written report
-          that summarize the approach, findings, and reflections on where AI
-          helped, where it struggled, and how it might be used responsibly in
-          future analysis.
-        </p>
-      </section>
-
-      <!-- Materials -->
-      <section>
-        <h2 class="section-title">Project Materials</h2>
-
-        <div class="materials-row">
-          <!-- Slides -->
-          <article class="card">
-            <h3 class="card-title">Presentation Slides</h3>
+      <section class="card-row">
+        <!-- RESUME CARD -->
+        <article class="card">
+          <div>
+            <h2 class="card-title">Resume</h2>
             <p class="card-text">
-              Slide deck summarizing the key questions, methods, and takeaways
-              from the project.
+              View my professional resume (PDF), including coursework and internships in
+              marketing, analytics, and sport business.
             </p>
-            <!-- Update this link later if you have slides: slides.pdf or an external link -->
-            <a class="link-button" href="#" onclick="return false;">
-              Slides coming soon
+          </div>
+          <div class="card-footer">
+            <!-- LINK DIRECTLY TO resume.pdf -->
+            <a class="link-button" href="resume.pdf" target="_blank" rel="noopener">
+              Open resume →
             </a>
-          </article>
+          </div>
+        </article>
 
-          <!-- Report -->
-          <article class="card">
-            <h3 class="card-title">Project Report</h3>
+        <!-- PROJECT CARD -->
+        <article class="card">
+          <div>
+            <h2 class="card-title">AI Class Project</h2>
             <p class="card-text">
-              Full written report with more detailed discussion of the AI tools
-              used, data sources, and implications.
+              See my AI in Economics project description, materials, and written report.
             </p>
-            <!-- IMPORTANT: assumes project.pdf sits next to project.html -->
-            <a class="link-button" href="project.pdf" target="_blank" rel="noopener">
-              View report →
+          </div>
+          <div class="card-footer">
+            <!-- GO TO project.html -->
+            <a class="link-button" href="project.html">
+              View project →
             </a>
-          </article>
-        </div>
+          </div>
+        </article>
       </section>
     </main>
+
+    <footer>
+      Last updated for RESECON 490AI
+    </footer>
   </div>
 </body>
 </html>
