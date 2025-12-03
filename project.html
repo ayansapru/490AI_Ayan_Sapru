@@ -59,8 +59,7 @@
       margin-bottom: 6px;
     }
 
-    .overview-card,
-    .materials-row > .card {
+    .card {
       background-color: var(--card-bg);
       border-radius: var(--radius-lg);
       border: 1px solid var(--border);
@@ -75,35 +74,15 @@
       margin-bottom: 8px;
     }
 
-    .materials-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
+    p + p { margin-top: 8px; }
+
+    ul {
       margin-top: 6px;
-    }
-
-    .card-title { font-weight: 600; margin-bottom: 4px; }
-
-    .card-text {
+      margin-left: 20px;
       font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-bottom: 12px;
     }
 
-    .link-button {
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #2563eb;
-    }
-
-    .link-button:hover { text-decoration: underline; }
-
-    @media (max-width: 720px) {
-      .page { padding: 24px 14px 32px; }
-      h1 { font-size: 2rem; }
-      .materials-row { grid-template-columns: 1fr; }
-    }
+    ul li { margin-bottom: 4px; }
   </style>
 </head>
 <body>
@@ -115,56 +94,69 @@
     </header>
 
     <main>
-      <!-- Overview -->
-      <section class="overview-card">
-        <h2 class="section-title">Project Overview</h2>
+      <!-- OVERVIEW -->
+      <section class="card">
+        <h2 class="section-title">Project Overview: U.S. Sports Sponsorship Industry</h2>
         <p>
-          This project explores how AI tools can support managerial economics, focusing
-          on structuring information, analyzing data, and generating decision-focused
-          insights for a business-style research question.
+          For this project I used AI tools to analyze the <strong>U.S. sports sponsorship industry</strong>. 
+          The report tracks how sports sponsorship revenue in the United States has grown from about 
+          $12.1&nbsp;billion in 2014 to nearly $20&nbsp;billion in 2024, how COVID-19 caused an estimated 
+          $14&nbsp;billion loss in 2020, and how the market quickly rebounded. Globally, sponsorship is 
+          expected to reach around $115&nbsp;billion by 2025 and $160&nbsp;billion by 2030, with the U.S. 
+          still holding roughly one-third of total share.
         </p>
         <p>
-          I combine course theory with hands-on experimentation using large language
-          models. The goal is to see when AI is helpful, where it makes mistakes, and
-          how human judgment is still needed to clean up and interpret the results.
-        </p>
-        <p>
-          The materials below include a short presentation and a written report that
-          summarize the methods, key findings, and reflections on responsible AI use.
+          A major theme is that <strong>sports sponsorship is overtaking ticket sales as the second-largest
+          revenue stream in sports</strong>. Growth is driven by assets such as jersey patches, on-field and 
+          digital signage, and new sponsor categories like tech, betting, and finance. The project highlights 
+          key players (Nike, Adidas, Coca-Cola, Microsoft, major financial institutions) and properties like 
+          the NFL, which generated roughly $2.35&nbsp;billion in sponsorship revenue in 2022–23. I also look 
+          at the rapid rise of college Name, Image, and Likeness (NIL), where deals now make up a 
+          $1.67&nbsp;billion market and turn college athletes into important sponsorship partners.
         </p>
       </section>
 
-      <!-- Materials -->
-      <section>
-        <h2 class="section-title">Project Materials</h2>
+      <!-- INDUSTRY STAGE -->
+      <section class="card">
+        <h2 class="section-title">Industry Stage: Growth with Emerging Risks</h2>
+        <p>
+          Using the evidence from my research, I classify the U.S. sports sponsorship industry as being in 
+          a strong <strong>growth stage</strong>. Team sponsorship revenue has climbed to around $8&nbsp;billion 
+          in 2024, and average per-team sponsorship revenue in major leagues is about $51&nbsp;million. New 
+          events such as the 2026 FIFA World Cup and the 2028 Los Angeles Olympics, plus momentum in women’s 
+          sports, create additional upside.
+        </p>
+        <p>
+          At the same time, I discuss risks that could slow the pace of growth. These include potential 
+          saturation in top leagues, economic headwinds, and uncertainty around NIL regulations. The project 
+          argues that rights-holders and brands will need better data and more strategic targeting to sustain 
+          long-run growth in sports sponsorship rather than just adding more logos in more places.
+        </p>
+      </section>
 
-        <div class="materials-row">
-          <!-- Slides -->
-          <article class="card">
-            <h3 class="card-title">Presentation Slides</h3>
-            <p class="card-text">
-              Slide deck summarizing the project question, approach, and main
-              takeaways.
-            </p>
-            <!-- Update this later with your real slides link -->
-            <a class="link-button" href="#" onclick="return false;">
-              Slides coming soon
-            </a>
-          </article>
-
-          <!-- Report -->
-          <article class="card">
-            <h3 class="card-title">Project Report</h3>
-            <p class="card-text">
-              Full written report with more detailed discussion of the AI tools,
-              data, and lessons learned.
-            </p>
-            <!-- LINK DIRECTLY TO project.pdf -->
-            <a class="link-button" href="project.pdf" target="_blank" rel="noopener">
-              View report →
-            </a>
-          </article>
-        </div>
+      <!-- DATA & AI TOOLS -->
+      <section class="card">
+        <h2 class="section-title">Data Landscape &amp; Role of AI</h2>
+        <p>
+          A key part of the project is mapping the <strong>data landscape for sports sponsorship</strong> and 
+          showing how AI could help make sense of it. I summarize major data sources, including:
+        </p>
+        <ul>
+          <li>Nielsen Sports for exposure tracking and sponsorship valuation across thousands of properties.</li>
+          <li>SponsorUnited for detailed deal-level data by brand, property, asset type, and market.</li>
+          <li>Opendorse and On3 for NIL deals, compensation estimates, and athlete–brand relationships.</li>
+          <li>Kaggle and Forbes data sets on athlete earnings and endorsement income over time.</li>
+          <li>Crunchbase for investment and growth data on sponsors, collectives, and sports marketing firms.</li>
+          <li>Macro data from FRED, BLS, and BEA to connect sponsorship spending to the broader economy.</li>
+        </ul>
+        <p>
+          I then outline ways that AI and analytics could deepen this research: time-series models of sponsorship 
+          growth, category treemaps comparing sponsor spend by industry, and network graphs mapping connections 
+          between brands, teams, athletes, and markets. In the project, AI mainly supports the <em>research 
+          workflow</em>—helping organize sources, draft summaries, and propose visualizations—while I provide 
+          the final interpretation and judgment about what the trends mean for the future of the U.S. sports 
+          sponsorship market.
+        </p>
       </section>
     </main>
   </div>
