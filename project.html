@@ -1,36 +1,181 @@
-<!-- PROJECT SUMMARY + REQUIRED FILE LINKS -->
-<section class="card">
-  <h2 class="section-title">Final Project Summary</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Class Project | Ayan Sapru</title>
 
-  <p>
-    This project analyzes the <strong>U.S. sports sponsorship industry</strong> using AI-supported
-    research methods. The report examines industry growth trends, major sponsorship drivers
-    such as digital assets and NIL, and the expanding role of data and artificial intelligence
-    in sponsorship valuation and strategy. The project also reflects on how AI can support
-    decision-making while emphasizing the importance of human judgment in sports business contexts.
-  </p>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card-bg: #ffffff;
+      --primary: #133267;
+      --text-main: #1f2933;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.08);
+      --radius-lg: 18px;
+    }
 
-  <hr style="margin: 16px 0; border: none; border-top: 1px solid var(--border);" />
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <p>
-    <strong>Project Write-Up (PDF)</strong><br />
-    <a href="Ayan Sapru Industry Report 490A completed.pdf" target="_blank" rel="noopener">
-      View report
-    </a>
-    &nbsp; • &nbsp;
-    <a href="Ayan Sapru Industry Report 490A completed.pdf" download>
-      Download report
-    </a>
-  </p>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
 
-  <p style="margin-top: 12px;">
-    <strong>Slide Deck</strong><br />
-    <a href="490 ai presentation complete.pptx" target="_blank" rel="noopener">
-      View slides
-    </a>
-    &nbsp; • &nbsp;
-    <a href="490 ai presentation complete.pptx" download>
-      Download slides
-    </a>
-  </p>
-</section>
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 16px 48px;
+    }
+
+    header { margin-bottom: 28px; }
+
+    .back-link {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+      padding: 22px 20px 20px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .file-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .file-item {
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .file-actions {
+      display: flex;
+      gap: 16px;
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+
+    .file-actions a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #2563eb;
+      font-size: 0.95rem;
+    }
+
+    .file-actions a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    @media (max-width: 720px) {
+      h1 { font-size: 2rem; }
+      footer { text-align: left; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <a href="index.html" class="back-link">← Back to portfolio</a>
+      <h1>AI Class Project</h1>
+      <p class="subtitle">RESECON 490AI – Artificial Intelligence in Economics</p>
+    </header>
+
+    <main>
+      <!-- PROJECT SUMMARY -->
+      <section class="card">
+        <h2 class="section-title">Final Project Summary</h2>
+        <p>
+          This project analyzes the <strong>U.S. sports sponsorship industry</strong> using AI-supported
+          research methods. The report examines long-run industry growth, emerging sponsorship
+          drivers such as digital assets and Name, Image, and Likeness (NIL), and the increasing
+          role of data and artificial intelligence in sponsorship valuation and strategy.
+          The project also reflects on how AI can support decision-making while emphasizing
+          the importance of human judgment in sports business contexts.
+        </p>
+      </section>
+
+      <!-- PROJECT FILES -->
+      <section class="card">
+        <h2 class="section-title">Project Files</h2>
+
+        <div class="file-links">
+          <div class="file-item">
+            <strong>Project Write-Up (PDF)</strong>
+            <div class="file-actions">
+              <a href="Ayan Sapru Industry Report 490A completed.pdf" target="_blank" rel="noopener">
+                View report →
+              </a>
+              <a href="Ayan Sapru Industry Report 490A completed.pdf" download>
+                Download report →
+              </a>
+            </div>
+          </div>
+
+          <div class="file-item">
+            <strong>Slide Deck</strong>
+            <div class="file-actions">
+              <a href="490 ai presentation complete.pptx" target="_blank" rel="noopener">
+                View slides →
+              </a>
+              <a href="490 ai presentation complete.pptx" download>
+                Download slides →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Last updated for RESECON 490AI
+    </footer>
+  </div>
+</body>
+</html>
